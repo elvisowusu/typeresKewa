@@ -25,7 +25,7 @@ export function ProductShowcase() {
             <Badge className="bg-[rgba(76,171,81,0.22)] text-black font-normal rounded-full px-3 py-1.5 mb-4">
               Why choose us
             </Badge>
-            <h2 className="text-3xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl lg:text-[3rem] font-bold text-gray-900 lg:w-[449px] leading-tight">
               Achieve Flawless Products, Faster
             </h2>
             <p className="text-gray-600 leading-relaxed">
