@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function CTA() {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden">
+    <section className="relative py-16 md:py-30 md:mb-20 lg:max-w-6xl lg:mx-auto rounded-2xl overflow-hidden">
       {/* Background Image */}
       <Image
         src="/getstartedtoday-bg.png"
@@ -11,7 +11,7 @@ export function CTA() {
         layout="fill"
         objectFit="cover"
         quality={75}
-        className="absolute inset-0 z-0 opacity-40"
+        className="absolute inset-0 z-0"
       />
       {/* Content */}
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -22,7 +22,7 @@ export function CTA() {
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             Join hundreds of satisfied clients and vendors who have simplified
             their design-to-product journey with Typeres. Start your project
-            today—free to use, pay only when you produce.
+            today free to use, pay only when you produce.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Button
