@@ -37,7 +37,13 @@ export function ProductShowcase() {
             <div className="space-y-4">
               {checklistItems.map((item, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-green-500 mt-2"></div>
+                  <Image 
+                    src="/check-icon.png"
+                    alt="Check Icon"
+                    width={20}
+                    height={20}
+                    className="flex-shrink-0"
+                  />
                   <span className="text-gray-700">{item}</span>
                 </div>
               ))}
