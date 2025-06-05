@@ -33,9 +33,9 @@ export function ProductShowcase() {
               Achieve Flawless Products, Faster
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Our advanced production process ensures that every product meets
-              the highest quality standards while maintaining fast turnaround
-              times.
+              Typeres empowers both clients and vendors with a unified, transparent
+              platform designed to deliver high-quality products efficiently and
+              professionally, every single time.
             </p>
             <div className="space-y-4">
               {checklistItems.map((item, index) => (
