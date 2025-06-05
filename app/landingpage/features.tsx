@@ -55,7 +55,7 @@ export function Features() {
       <div className="container mx-auto px-6 lg:px-[5rem]">
         <div className="text-center mb-12 md:mb-16">
           {/* Features Badge */}
-          <Badge className="bg-[rgba(76,171,81,0.22)] text-black font-normal rounded-full px-3 py-1.5 mb-4">
+          <Badge className="bg-[#D8EDD9] text-black font-normal rounded-full px-3 py-1.5 mb-4">
             Features
           </Badge>
           {/* Section Heading */}
@@ -66,10 +66,10 @@ export function Features() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="p-6 text-center shadow-md">
-              <CardContent className="space-y-4">
-                {/* Icon Container */}
-                <div className="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mx-auto">
+            <Card key={index} className="p-6 shadow-md">
+              <CardContent className="space-y-4 flex flex-col items-start">
+                {/* Icon Container - REMOVED mx-auto */}
+                <div className="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
                   <feature.icon className="w-6 h-6 text-green-600" />
                 </div>
                 {/* Feature Title */}
