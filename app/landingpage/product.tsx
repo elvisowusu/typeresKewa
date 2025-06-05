@@ -3,10 +3,11 @@ import Image from "next/image";
 
 export function ProductShowcase() {
   const checklistItems = [
-    "Manage your designs and track progress with real-time updates",
-    "Cost-effective solutions",
-    "Ensure high-quality designs and products with dedicated quality control",
-    "Fast turnaround times",
+    "Manage your designs and connect with vendors at no cost. ",
+    "Eliminate manual processes and reduce downtime.",
+    "Ensure high-quality designs and products with precise instructions. ",
+    "Track orders and communicate effortlessly with clients. ",
+    "Pay only when you’re ready to produce—no hidden fees. ",
   ];
 
   return (
@@ -21,7 +22,7 @@ export function ProductShowcase() {
             className="relative z-10 w-full h-auto max-w-lg rounded-lg shadow-xl object-contain"
             priority
           />
-          <div className="space-y-6">
+          <div className="space-y-6 lg:w-[589px]">
             <Badge className="bg-[rgba(76,171,81,0.22)] text-black font-normal rounded-full px-3 py-1.5 mb-4">
               Why choose us
             </Badge>
