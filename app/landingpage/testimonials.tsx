@@ -1,75 +1,79 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star } from "lucide-react";
+import Image from "next/image"; // Import Image for profile pictures
 
 const testimonials = [
   {
-    name: "David Johnson",
-    role: "Creative Director",
+    image: "/profile-micheal-1.png",
+    name: "Micheal Johnson",
+    role: "Event manager",
     content:
-      "The platform has revolutionized how we handle our design-to-product workflow. The quality and speed are unmatched.",
+      "Typeres empowers both clients and vendors with a unified, transparent platform designed to deliver high-quality products efficiently and professionally, every single time.", // Consistent content
   },
   {
-    name: "Sarah Wilson",
-    role: "Brand Manager",
+    image: "/profile-micheal-2.png",
+    name: "Micheal Johnson",
+    role: "Event manager",
     content:
-      "Incredible service! From upload to delivery, everything was seamless. Our products turned out exactly as envisioned.",
+      "Typeres empowers both clients and vendors with a unified, transparent platform designed to deliver high-quality products efficiently and professionally, every single time.",
   },
   {
-    name: "Michael Brown",
-    role: "Product Designer",
+    image: "/profile-micheal-3.png",
+    name: "Micheal Johnson",
+    role: "Event manager",
     content:
-      "The real-time tracking and quality assurance gave us complete confidence throughout the production process.",
+      "Typeres empowers both clients and vendors with a unified, transparent platform designed to deliver high-quality products efficiently and professionally, every single time.",
   },
   {
-    name: "Emma Davis",
-    role: "Marketing Director",
+    image: "/profile-micheal-4.png",
+    name: "Micheal Johnson",
+    role: "Event manager",
     content:
-      "Outstanding results! The team's attention to detail and commitment to quality exceeded our expectations.",
+      "Typeres empowers both clients and vendors with a unified, transparent platform designed to deliver high-quality products efficiently and professionally, every single time.",
   },
   {
-    name: "James Miller",
-    role: "Creative Manager",
+    image: "/profile-micheal-5.png",
+    name: "Micheal Johnson",
+    role: "Event manager",
     content:
-      "Fast, reliable, and professional. This platform has become an essential part of our creative workflow.",
+      "Typeres empowers both clients and vendors with a unified, transparent platform designed to deliver high-quality products efficiently and professionally, every single time.",
   },
   {
-    name: "Lisa Anderson",
-    role: "Design Lead",
+    image: "/profile-micheal-6.png",
+    name: "Micheal Johnson",
+    role: "Event manager",
     content:
-      "The simplified process and amazing features make it so easy to bring our designs to life. Highly recommended!",
+      "Typeres empowers both clients and vendors with a unified, transparent platform designed to deliver high-quality products efficiently and professionally, every single time.",
   },
 ];
 
-function TestimonialCard({ name, role, content }: typeof testimonials[0]) {
-  const initials = name
-    .split(" ")
-    .map((n) => n[0])
-    .join("");
-
+function TestimonialCard({
+  image,
+  name,
+  role,
+  content,
+}: (typeof testimonials)[0]) {
   return (
-    <Card className="p-6 shadow-md">
-      <CardContent className="space-y-4">
-        <div className="flex items-center space-x-1 justify-center">
-          {[...Array(5)].map((_, i) => (
-            <Star
-              key={i}
-              className="h-4 w-4 fill-yellow-400 text-yellow-400"
+    <Card className="p-6 bg-[#1D386E0A] border-none shadow-none">
+      <CardContent className="space-y-4 flex flex-col items-start">
+        {" "}
+        <div className="flex items-center space-x-3 mb-4">
+          {" "}
+          <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+            <Image
+              src={image}
+              alt={name}
+              width={40}
+              height={40}
+              className="object-cover"
             />
-          ))}
-        </div>
-        <p className="text-gray-600 text-sm leading-relaxed text-center">
-          {content}
-        </p>
-        <div className="flex items-center space-x-3 justify-center">
-          <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-            <span className="text-gray-600 font-semibold text-sm">{initials}</span>
           </div>
           <div>
-            <div className="font-semibold text-sm text-gray-900">{name}</div>
-            <div className="text-gray-500 text-xs">{role}</div>
+            <div className="font-semibold text-sm">{name}</div>
+            <div className="text-xs">{role}</div>
           </div>
         </div>
+        <p className=" text-sm leading-relaxed text-left">{content}</p>
       </CardContent>
     </Card>
   );
@@ -77,16 +81,17 @@ function TestimonialCard({ name, role, content }: typeof testimonials[0]) {
 
 export function Testimonials() {
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section className="py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-6 lg:px-[5rem]">
         <div className="text-center mb-12 md:mb-16">
-          <Badge className="bg-green-100 text-green-800 font-normal rounded-full px-3 py-1.5 mb-4">
+          <Badge className="bg-[rgba(76,171,81,0.22)] text-black font-normal rounded-full px-3 py-1.5 mb-4">
             Testimonials
           </Badge>
           <h2 className="text-3xl font-bold text-gray-900">
             Hear From Our Satisfied Users
           </h2>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
