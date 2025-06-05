@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Image from "next/image"; // Import Image for profile pictures
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -8,7 +8,7 @@ const testimonials = [
     name: "Micheal Johnson",
     role: "Event manager",
     content:
-      "Typeres empowers both clients and vendors with a unified, transparent platform designed to deliver high-quality products efficiently and professionally, every single time.", // Consistent content
+      "Typeres empowers both clients and vendors with a unified, transparent platform designed to deliver high-quality products efficiently and professionally, every single time.",
   },
   {
     image: "/profile-micheal-2.png",
@@ -54,26 +54,24 @@ function TestimonialCard({
   content,
 }: (typeof testimonials)[0]) {
   return (
-    <Card className="p-6 bg-[#1D386E0A] border-none shadow-none">
-      <CardContent className="space-y-4 flex flex-col items-start">
-        {" "}
+    <Card className="p-6 bg-[#F8F9FB] border-none shadow-none rounded-2xl break-inside-avoid mb-6">
+      <CardContent className="p-0">
         <div className="flex items-center space-x-3 mb-4">
-          {" "}
-          <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+          <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
             <Image
               src={image}
               alt={name}
-              width={40}
-              height={40}
+              width={48}
+              height={48}
               className="object-cover"
             />
           </div>
           <div>
-            <div className="font-semibold text-sm">{name}</div>
-            <div className="text-xs">{role}</div>
+            <div className="font-semibold text-base text-gray-900">{name}</div>
+            <div className="text-sm text-gray-600">{role}</div>
           </div>
         </div>
-        <p className=" text-sm leading-relaxed text-left">{content}</p>
+        <p className="text-sm leading-relaxed text-gray-700">{content}</p>
       </CardContent>
     </Card>
   );
@@ -92,7 +90,8 @@ export function Testimonials() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Masonry Layout */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-0">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
           ))}
