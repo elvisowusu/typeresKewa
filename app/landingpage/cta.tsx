@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function CTA() {
   return (
-    <section className="relative py-16 md:py-30 md:mb-20 lg:max-w-6xl lg:mx-auto rounded-2xl overflow-hidden">
+    <section className="relative mx-8 py-16 md:py-30 md:mb-20 lg:max-w-6xl lg:mx-auto rounded-2xl overflow-hidden">
       {/* Background Image */}
       <Image
         src="/getstartedtoday-bg.png"
