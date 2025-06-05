@@ -17,9 +17,9 @@ export function CTA() {
             Get Started Today
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Transform your creative designs into high-quality products. Join
-            thousands of satisfied customers who trust us with their
-            design-to-product journey.
+            Join hundreds of satisfied clients and vendors who have simplified
+            their design-to-product journey with Typeres. Start your project
+            today—free to use, pay only when you produce. 
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Button
