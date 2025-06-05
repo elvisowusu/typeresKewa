@@ -1,15 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge"; // Ensure Badge component is imported
+import { Badge } from "@/components/ui/badge";
 import {
-  FileText, // For Effortless Design Workflow
-  Users, // For Curated Vendor Matching
-  Eye, // For Real-time Order Visibility
-  Briefcase, // For Direct & Clear Orders
-  ShieldCheck, // For Secure & Transparent Payments
-  LayoutDashboard, // For Free Design Management
+  FileText,
+  Users,
+  Eye,
+  Briefcase,
+  ShieldCheck,
+  LayoutDashboard,
 } from "lucide-react";
 
-// Define the features data as an array of objects
 const features = [
   {
     icon: FileText,
@@ -54,29 +53,26 @@ export function Features() {
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-6 lg:px-[5rem]">
         <div className="text-center mb-12 md:mb-16">
-          {/* Features Badge */}
           <Badge className="bg-[#D8EDD9] text-black font-normal rounded-full px-3 py-1.5 mb-4">
             Features
           </Badge>
-          {/* Section Heading */}
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             We also provide clients and vendors with amazing features like
           </h2>
         </div>
-        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="p-6 shadow-md">
-              <CardContent className="space-y-4 flex flex-col items-start">
-                {/* Icon Container - REMOVED mx-auto */}
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center">
+            <Card
+              key={index}
+              className="p-6 bg-transparent border-none" 
+            >
+              <CardContent className="space-y-4 flex flex-col items-start p-0">
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-green-100 text-green-800">
                   <feature.icon className="w-6 h-6" />
                 </div>
-                {/* Feature Title */}
                 <h3 className="font-semibold text-lg text-gray-900">
                   {feature.title}
                 </h3>
-                {/* Feature Description */}
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {feature.description}
                 </p>
