@@ -13,14 +13,14 @@ export function ProductShowcase() {
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-6 lg:px-[5rem]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-           <Image
-              src="/product-showcase-mockup.png"
-              alt="Product Showcase Mockup"
-              width={600}
-              height={500}
-              className="relative z-10 w-full h-auto max-w-lg rounded-lg shadow-xl object-contain"
-              priority
-            />
+          <Image
+            src="/product-showcase-mockup.png"
+            alt="Product Showcase Mockup"
+            width={579}
+            height={529}
+            className="relative z-10 w-full h-auto max-w-lg rounded-lg shadow-xl object-contain"
+            priority
+          />
           <div className="space-y-6">
             <Badge className="bg-[rgba(76,171,81,0.22)] text-black font-normal rounded-full px-3 py-1.5 mb-4">
               Why choose us
@@ -29,9 +29,9 @@ export function ProductShowcase() {
               Achieve Flawless Products, Faster
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Typeres empowers both clients and vendors with a unified, transparent
-              platform designed to deliver high-quality products efficiently and
-              professionally, every single time.
+              Typeres empowers both clients and vendors with a unified,
+              transparent platform designed to deliver high-quality products
+              efficiently and professionally, every single time.
             </p>
             <div className="space-y-4">
               {checklistItems.map((item, index) => (
