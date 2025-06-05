@@ -67,7 +67,7 @@ export function Features() {
               className="p-6 bg-transparent border-none" 
             >
               <CardContent className="space-y-4 flex flex-col items-start p-0">
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-green-100 text-green-800">
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center ">
                   <feature.icon className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold text-lg text-gray-900">
