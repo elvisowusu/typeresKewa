@@ -69,8 +69,8 @@ export function Features() {
             <Card key={index} className="p-6 shadow-md">
               <CardContent className="space-y-4 flex flex-col items-start">
                 {/* Icon Container - REMOVED mx-auto */}
-                <div className="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
-                  <feature.icon className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center">
+                  <feature.icon className="w-6 h-6" />
                 </div>
                 {/* Feature Title */}
                 <h3 className="font-semibold text-lg text-gray-900">
